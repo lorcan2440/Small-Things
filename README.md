@@ -10,7 +10,7 @@ Example uses:
 
 Vector field quiver plot
 
-![image](https://user-images.githubusercontent.com/72615977/131226232-554a5f30-1b3f-4dc4-9a8e-770c98b4161b.png)
+![image](https://user-images.githubusercontent.com/72615977/131226330-36e791c6-2c75-4849-9562-995684f13749.png)
 
 Magnitude of field along magnetisation axis
 
