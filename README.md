@@ -1,0 +1,1 @@
+# bar-magnet-3d-field-equation
