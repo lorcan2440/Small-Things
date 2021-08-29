@@ -15,3 +15,8 @@ Vector field quiver plot
 Magnitude of field along magnetisation axis
 
 ![image](https://user-images.githubusercontent.com/72615977/131226237-1eb8ee42-de5c-4942-b5cf-573ea5bcf0c1.png)
+
+Field lines in plane z = 0
+
+![image](https://user-images.githubusercontent.com/72615977/131256723-06ca02e2-339f-4c69-8d83-c3aac45c37a1.png)
+
