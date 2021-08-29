@@ -18,5 +18,4 @@ Magnitude of field along magnetisation axis
 
 Field lines in plane z = 0
 
-![image](https://user-images.githubusercontent.com/72615977/131256723-06ca02e2-339f-4c69-8d83-c3aac45c37a1.png)
-
+![image](https://user-images.githubusercontent.com/72615977/131257284-02079799-6d92-45be-925a-5ae99fbb28c2.png)
