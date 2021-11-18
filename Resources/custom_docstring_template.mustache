@@ -1,0 +1,39 @@
+{{! Custom Docstring Template }}
+{{! To be used with Python Docstring Generator extension for VSCode:}}
+{{! https://github.com/NilsJPWerner/autoDocstring}}
+{{summaryPlaceholder}}
+{{extendedSummaryPlaceholder}}
+{{#parametersExist}}
+#### Arguments
+
+{{#args}}
+`{{var}}` ({{typePlaceholder}}): {{descriptionPlaceholder}}
+{{/args}}
+{{#kwargs}}
+`{{var}}` ({{typePlaceholder}}, default = {{&default}}): {{descriptionPlaceholder}}
+{{/kwargs}}
+{{/parametersExist}}
+
+{{#returnsExist}}
+#### Returns
+
+{{#returns}}
+{{typePlaceholder}}: {{descriptionPlaceholder}}
+{{/returns}}
+{{/returnsExist}}
+
+{{#yieldsExist}}
+#### Yields
+
+{{#yields}}
+{{typePlaceholder}}: {{descriptionPlaceholder}}
+{{/yields}}
+{{/yieldsExist}}
+
+{{#exceptionsExist}}
+#### Raises
+
+{{#exceptions}}
+`{{type}}`: {{descriptionPlaceholder}}
+{{/exceptions}}
+{{/exceptionsExist}}
