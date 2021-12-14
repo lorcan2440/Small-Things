@@ -1,9 +1,10 @@
 from serial import Serial
 import datetime as dt
+import time
+
 from matplotlib import pyplot as plt
 from matplotlib.ticker import MaxNLocator
 import matplotlib.animation as anim
-import time
 
 TIME_STEP = 1.0
 T_OS = 28
