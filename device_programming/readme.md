@@ -4,5 +4,5 @@ Compiler and IDE: https://ide.mbed.com/compiler/#nav:/mbed-os-example-mbed5-blin
 
 Docs: https://cued-partib-device-programming.readthedocs.io/en/latest/introduction.html
 
-![](connections.png?raw=true)
-![](screenshot.png?raw=true)
+[](connections.png)
+[](screenshot.png)
