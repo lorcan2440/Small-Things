@@ -2,4 +2,4 @@
 
 Some functions for drawing better cv2.rectangles - dashed, dotted, dashdot and cornered.
 
-[img_boxes.png](img_boxes.png)
+![Boxes example](img_boxes.png)
