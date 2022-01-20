@@ -3,7 +3,20 @@ import numpy as np
 
 
 def draw_dotted_line(img: np.ndarray, pt1: tuple, pt2: tuple, color: tuple,
-        thickness: int, spacing: int, lineType=cv2.LINE_8):
+        thickness: int, spacing: int, lineType: int = cv2.LINE_8):
+    '''
+    Draws a dotted line between two points.
+    
+    #### Arguments
+    
+    `img` (np.ndarray): image to draw on
+    `pt1` (tuple): first point of line
+    `pt2` (tuple): second point of line
+    `color` (tuple): bgr color
+    `thickness` (int): line thickness
+    `spacing` (int): space between dots
+    `lineType` (int, default = cv2.LINE_8): cv2 line type, (4, 8 or AA)
+    '''
 
     dist = np.hypot(pt1[0] - pt2[0], pt1[1] - pt2[1])
     pts = np.linspace(pt1, pt2, int(dist / spacing))
@@ -14,7 +27,20 @@ def draw_dotted_line(img: np.ndarray, pt1: tuple, pt2: tuple, color: tuple,
 
 
 def draw_dashed_line(img: np.ndarray, pt1: tuple, pt2: tuple, color: tuple,
-        thickness: int, spacing: int, lineType=cv2.LINE_8):
+        thickness: int, spacing: int, lineType: int = cv2.LINE_8):
+    '''
+    Draws a dashed line between two points.
+    
+    #### Arguments
+    
+    `img` (np.ndarray): image to draw on
+    `pt1` (tuple): first point of line
+    `pt2` (tuple): second point of line
+    `color` (tuple): bgr color
+    `thickness` (int): line thickness
+    `spacing` (int): space between dashes
+    `lineType` (int, default = cv2.LINE_8): cv2 line type, (4, 8 or AA)
+    '''
 
     dist = np.hypot(pt1[0] - pt2[0], pt1[1] - pt2[1])
     pts = np.linspace(pt1, pt2, int(dist / spacing))
@@ -27,7 +53,20 @@ def draw_dashed_line(img: np.ndarray, pt1: tuple, pt2: tuple, color: tuple,
 
 
 def draw_dashdot_line(img: np.ndarray, pt1: tuple, pt2: tuple, color: tuple,
-        thickness: int, spacing: int, lineType=cv2.LINE_8):
+        thickness: int, spacing: int, lineType: int = cv2.LINE_8):
+    '''
+    Draws a dashed and dotted line between two points.
+    
+    #### Arguments
+    
+    `img` (np.ndarray): image to draw on
+    `pt1` (tuple): first point of line
+    `pt2` (tuple): second point of line
+    `color` (tuple): bgr color
+    `thickness` (int): line thickness
+    `spacing` (int): space between dots
+    `lineType` (int, default = cv2.LINE_8): cv2 line type, (4, 8 or AA)
+    '''
 
     dist = np.hypot(pt1[0] - pt2[0], pt1[1] - pt2[1])
     pts = np.linspace(pt1, pt2, int(dist / spacing))
@@ -41,7 +80,20 @@ def draw_dashdot_line(img: np.ndarray, pt1: tuple, pt2: tuple, color: tuple,
 
 
 def draw_dotted_rectangle(img: np.ndarray, pt1: tuple, pt2: tuple, color: tuple,
-        thickness: int, spacing: int, lineType=cv2.LINE_8):
+        thickness: int, spacing: int, lineType: int = cv2.LINE_8):
+    '''
+    Draws a dotted rectangle.
+    
+    #### Arguments
+    
+    `img` (np.ndarray): image to draw on
+    `pt1` (tuple): first corner
+    `pt2` (tuple): opposite corner
+    `color` (tuple): bgr color
+    `thickness` (int): line thickness
+    `spacing` (int): space between dots
+    `lineType` (int, default = cv2.LINE_8): cv2 line type, (4, 8 or AA)
+    '''
 
     draw_dotted_line(img, pt1, (pt2[0], pt1[1]), color, thickness, spacing, lineType)
     draw_dotted_line(img, (pt2[0], pt1[1]), pt2, color, thickness, spacing, lineType)
@@ -50,7 +102,20 @@ def draw_dotted_rectangle(img: np.ndarray, pt1: tuple, pt2: tuple, color: tuple,
 
 
 def draw_dashed_rectangle(img: np.ndarray, pt1: tuple, pt2: tuple, color: tuple,
-        thickness: int, spacing: int, lineType=cv2.LINE_8):
+        thickness: int, spacing: int, lineType: int = cv2.LINE_8):
+    '''
+    Draws a dotted rectangle.
+    
+    #### Arguments
+    
+    `img` (np.ndarray): image to draw on
+    `pt1` (tuple): first corner
+    `pt2` (tuple): opposite corner
+    `color` (tuple): bgr color
+    `thickness` (int): line thickness
+    `spacing` (int): space between dots
+    `lineType` (int, default = cv2.LINE_8): cv2 line type, (4, 8 or AA)
+    '''
 
     draw_dashed_line(img, pt1, (pt2[0], pt1[1]), color, thickness, spacing, lineType)
     draw_dashed_line(img, (pt2[0], pt1[1]), pt2, color, thickness, spacing, lineType)
@@ -59,7 +124,20 @@ def draw_dashed_rectangle(img: np.ndarray, pt1: tuple, pt2: tuple, color: tuple,
 
 
 def draw_dashdot_rectangle(img: np.ndarray, pt1: tuple, pt2: tuple, color: tuple,
-        thickness: int, spacing: int, lineType=cv2.LINE_8):
+        thickness: int, spacing: int, lineType: int = cv2.LINE_8):
+    '''
+    Draws a dotted rectangle.
+    
+    #### Arguments
+    
+    `img` (np.ndarray): image to draw on
+    `pt1` (tuple): first corner
+    `pt2` (tuple): opposite corner
+    `color` (tuple): bgr color
+    `thickness` (int): line thickness
+    `spacing` (int): space between dots
+    `lineType` (int, default = cv2.LINE_8): cv2 line type, (4, 8 or AA)
+    '''
 
     draw_dashdot_line(img, pt1, (pt2[0], pt1[1]), color, thickness, spacing, lineType)
     draw_dashdot_line(img, (pt2[0], pt1[1]), pt2, color, thickness, spacing, lineType)
@@ -72,6 +150,22 @@ def draw_corner_rectangle(img: np.ndarray, pt1: tuple, pt2: tuple,
         corner_color: tuple, edge_color: tuple, corner_length: int,
         corner_thickness: int = 3, edge_thickness: int = 1,
         centre_cross: bool = True, lineType=cv2.LINE_8):
+    '''
+    Draws a rectangle with styled corners and an optional crosshair in the centre.
+    
+    #### Arguments
+    
+    `img` (np.ndarray): image to draw on
+    `pt1` (tuple): first corner
+    `pt2` (tuple): opposite corner
+    `corner_color` (tuple): color of corner detail
+    `edge_color` (tuple): color of edge
+    `corner_length` (int): length of corner detail
+    `corner_thickness` (int, default = 3): thickness of corner detail
+    `edge_thickness` (int, default = 1): thickness of edge
+    `centre_cross` (bool, default = True): if True, include a edge-like crosshair in the centre
+    `lineType` ([type], default = cv2.LINE_8): cv2 line type, (4, 8 or AA)
+    '''
 
     e_args = [edge_color, edge_thickness, lineType]
     c_args = [corner_color, corner_thickness, lineType]
@@ -105,4 +199,5 @@ draw_dashdot_rectangle(im, (100, 350), (350, 550), (255, 200, 100), 2, 40)
 draw_corner_rectangle(im, (450, 350), (600, 500), (160, 180, 80), (80, 90, 40), 30)
 
 cv2.imshow('im', im)
+cv2.imwrite('img_boxes.png', im)
 cv2.waitKey()
