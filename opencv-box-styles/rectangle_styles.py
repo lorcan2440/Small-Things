@@ -99,10 +99,10 @@ def draw_corner_rectangle(img: np.ndarray, pt1: tuple, pt2: tuple,
 
 im = np.zeros((800, 800, 3), dtype='uint8')
 
-draw_dotted_rectangle(im, (100, 100), (400, 500), (120, 90, 200), 2, 20)
-draw_dashed_rectangle(im, (200, 200), (600, 350), (90, 50, 255), 2, 20)
-draw_dashdot_rectangle(im, (150, 150), (350, 400), (255, 200, 100), 2, 40)
-draw_corner_rectangle(im, (200, 200), (500, 500), (160, 180, 80), (80, 90, 40), 30)
+draw_dotted_rectangle(im, (100, 100), (300, 300), (120, 90, 200), 2, 20)
+draw_dashed_rectangle(im, (400, 100), (700, 300), (10, 100, 255), 2, 20)
+draw_dashdot_rectangle(im, (100, 350), (350, 550), (255, 200, 100), 2, 40)
+draw_corner_rectangle(im, (450, 350), (600, 500), (160, 180, 80), (80, 90, 40), 30)
 
 cv2.imshow('im', im)
 cv2.waitKey()
