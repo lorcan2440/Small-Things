@@ -1,6 +1,6 @@
 Generators for Wonder Mail in Pokemon Mystery Dungeon: Explorers of Sky.
 
-Wonder mail generator: (https://syphist.com/pmd/explorers/wondermail.html)[https://syphist.com/pmd/explorers/wondermail.html]
+Wonder mail generator: [https://syphist.com/pmd/explorers/wondermail.html](https://syphist.com/pmd/explorers/wondermail.html)
 
 Originals (removed)
 
