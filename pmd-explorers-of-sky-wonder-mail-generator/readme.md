@@ -1,4 +1,9 @@
-Generators for Wonder Mail in Pokemon Mystery Dungeon: Explorers of Sky.
+Generators for Wonder Mail in Pokemon Mystery Dungeon: Explorers of Sky. In 4 languages:
+
+- Python
+- JavaScript + HTML
+- C++
+- Lua
 
 Wonder mail generator: [https://syphist.com/pmd/explorers/wondermail.html](https://syphist.com/pmd/explorers/wondermail.html)
 
