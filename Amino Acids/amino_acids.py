@@ -1,6 +1,9 @@
 from typing import NamedTuple
 
 
+class InvalidCodonError(Exception): ...
+
+
 class AminoAcid(NamedTuple):
     '''
     Represents a single amino acid, by name, symbol and character.
@@ -48,15 +51,22 @@ RNA_TO_AMINO_ACID_MAPPING = {
 }
 
 
-RNA_STRING = 'AUGGUAAACUCACCUAAUCUAUCCGGAUGG'
+RNA_STRING = 'AUGGUAAACUCACCUAAUCUAUCCGGAUGGABAGCC'
+CODON_LENGTH = 3
 
 
 def convert_rna_to_amino_acids(rna: str):
 
-    rna_codons = (rna[i : i + 3] for i in range(0, len(rna), 3))
+    rna_codons = (rna[i : i + CODON_LENGTH] for i in range(0, len(rna), CODON_LENGTH))
 
-    yield from (RNA_TO_AMINO_ACID_MAPPING[codon] for codon in rna_codons)
+    yield from (RNA_TO_AMINO_ACID_MAPPING.get(codon, None) for codon in rna_codons)
 
 
-for amino_acid in convert_rna_to_amino_acids(RNA_STRING):
-    print(amino_acid.name)
+for i, amino_acid in enumerate(convert_rna_to_amino_acids(RNA_STRING)):
+    if amino_acid is not None:
+        print(amino_acid.name)
+    else:
+        raise InvalidCodonError(
+            f'Bad codon found at position {CODON_LENGTH * i} in RNA string. Sequence '
+            f'"{RNA_STRING[CODON_LENGTH * i : min([len(RNA_STRING), CODON_LENGTH * (i + 1)])]}" '
+            'does not map to any amino acid.')
