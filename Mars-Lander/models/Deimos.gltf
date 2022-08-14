@@ -1,0 +1,125 @@
+{
+  "asset": {
+    "generator": "Khronos Blender glTF 2.0 I/O",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "deimos"
+    }
+  ],
+  "materials": [
+    {
+      "name": "deimos_tex_01",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "metallicFactor": 0.5,
+        "roughnessFactor": 0.89999997615814209
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Sphere.029",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "source": 0
+    }
+  ],
+  "images": [
+    {
+      "name": "deimos_tex_01.jpg",
+      "uri": "Deimos_image0.png"
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 16649,
+      "max": [
+        7.7807350158691406,
+        5.5819287300109863,
+        5.0740189552307129
+      ],
+      "min": [
+        -7.2317218780517578,
+        -6.2877883911132812,
+        -5.4313874244689941
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 16649,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 16649,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 97536,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 199788,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteLength": 199788,
+      "byteOffset": 199788
+    },
+    {
+      "buffer": 0,
+      "byteLength": 133192,
+      "byteOffset": 399576
+    },
+    {
+      "buffer": 0,
+      "byteLength": 195072,
+      "byteOffset": 532768
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 727840,
+      "uri": "Deimos.bin"
+    }
+  ]
+}
